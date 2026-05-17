@@ -1,47 +1,77 @@
-# Arjun Ashad · Emperor-Z
-
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=22&duration=3000&pause=900&color=2F80ED&center=true&vCenter=true&width=760&lines=Applied+AI+MSc+%40+Warwick;Machine+Learning+%7C+Clinical+AI+%7C+NLP;Building+local+AI+systems+and+practical+ML+tools" alt="Applied AI, clinical AI, NLP, and local AI systems" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=0:0F172A,55:1D4ED8,100:14B8A6&text=Arjun%20Ashad&fontAlign=50&fontAlignY=38&fontColor=FFFFFF&fontSize=44&desc=Applied%20AI%20%7C%20Clinical%20ML%20%7C%20Local%20AI%20Systems&descAlign=50&descAlignY=62" alt="Arjun Ashad - Applied AI, Clinical ML, Local AI Systems" />
 </p>
 
-**AI/ML engineer** · MSc Applied AI @ University of Warwick  
-Focused on machine learning systems, clinical AI, NLP, and practical automation tooling.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=760&lines=MSc+Applied+AI+%40+University+of+Warwick;Building+ML+systems+for+healthcare+and+automation;Unity+%2B+game+technology+for+interactive+clinical+tools" alt="Applied AI, healthcare ML, local AI systems, Unity game technology" />
+</p>
+
+<p align="center">
+  <a href="https://linkedin.com/in/arjun-ashad-z"><img src="https://img.shields.io/badge/LinkedIn-Arjun%20Ashad-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/Emperor-Z"><img src="https://img.shields.io/badge/GitHub-Emperor--Z-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <img src="https://img.shields.io/badge/Coventry-UK-14B8A6?style=for-the-badge" alt="Coventry, UK" />
+</p>
 
 ---
 
-## Stack
+<table>
+<tr>
+<td width="33%">
 
-**ML/AI** · Python · TensorFlow · PyTorch · scikit-learn · HuggingFace Transformers · OpenCV  
-**Backend** · Flask · FastAPI · SQL · AWS · Azure  
-**Frontend** · React · TypeScript · Tailwind CSS  
-**Tools** · Git · Unity · Figma · Docker · Linux
+### AI / ML
+Python · PyTorch · TensorFlow · scikit-learn · HuggingFace · OpenCV
 
----
+</td>
+<td width="33%">
 
-## Experience
+### Systems
+FastAPI · Flask · SQL · Docker · AWS · Azure · Linux
 
-**SACOM** — Worked on private clinical AI/EMR tooling for ophthalmology workflows, including computer vision and voice-assisted documentation modules. Code and client data are not public due to NDA and healthcare privacy constraints.  
-**Sreenethra Eye Care** — Built a Unity-based therapeutic game for amblyopia treatment with progressive difficulty, performance logging, and clinician-facing review workflows.
+</td>
+<td width="33%">
 
----
+### Interactive Tech
+Unity · game design · UI/UX · React · TypeScript · Tailwind
 
-## Selected Projects
+</td>
+</tr>
+</table>
 
-| Project | Description | Stack |
-|---|---|---|
-| [Ares / Aries](https://github.com/Emperor-Z/aries) | Local multi-agent AI system with orchestrator, coder, thinker, runner, Serena integration, A2A HTTP services, memory, and Langfuse observability | Python · Ollama · Docker · Langfuse |
-| [Helpful Vote Prediction](https://github.com/Sana-Shikalgar/WM9B7-AIDL-AmazonReview) | MSc group project on Amazon Reviews 2023 helpfulness prediction; contributed label design, EDA, data preparation, temporal splitting, and leakage checks | Python · HuggingFace · Pandas · scikit-learn |
-| [Sreenethra Eye Care Platform](https://github.com/Emperor-Z/project_sreenethra_website_and_template) | Clinical website for an ophthalmology practice with appointment, services, doctor, blog, and contact pages | HTML · CSS · TypeScript |
-| Depression Detection in the Workplace | Final-year ML project using stacked ensembles and chatbot-assisted screening; repo/code cleanup pending before public release | Python · scikit-learn · Flask |
+## Featured Work
 
----
+<table>
+<tr>
+<td width="33%">
 
-## Currently
+### [Ares / Aries](https://github.com/Emperor-Z/aries)
+Local multi-agent AI system with Ollama agents, A2A services, memory, Serena integration, and Langfuse observability.
 
-- MSc Applied AI @ Warwick *(Sep 2025 - Sep 2026)*
-- Working on large-scale review helpfulness prediction and local AI agent systems
-- Open to **graduate ML/AI roles**, software engineering roles with ML exposure, and **PhD opportunities** in medical AI
+`Python` `Ollama` `Docker` `Langfuse`
 
----
+</td>
+<td width="33%">
 
-Coventry, UK · [LinkedIn](https://linkedin.com/in/arjun-ashad-z) · [GitHub](https://github.com/Emperor-Z)
+### [Sreenethra Clinical Platform](https://github.com/Emperor-Z/project_sreenethra_website_and_template)
+Ophthalmology website and clinical UX work developed alongside a Unity-based amblyopia therapy game.
+
+`HTML` `CSS` `TypeScript` `Unity`
+
+</td>
+<td width="33%">
+
+### [Amazon Review Helpfulness](https://github.com/Sana-Shikalgar/WM9B7-AIDL-AmazonReview)
+MSc group project on helpful vote prediction with label design, EDA, temporal splitting, and leakage checks.
+
+`Python` `NLP` `HuggingFace` `Pandas`
+
+</td>
+</tr>
+</table>
+
+## Private / NDA Work
+
+Worked on private clinical AI/EMR tooling at **SACOM**, including ophthalmology workflow modules involving computer vision and voice-assisted documentation. Code and client data are not public due to NDA and healthcare privacy constraints.
+
+## Current Focus
+
+`MSc Applied AI @ Warwick` · `medical AI` · `large-scale NLP` · `local AI agents` · `game technology for healthcare`
