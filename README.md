@@ -1,5 +1,9 @@
 # Arjun Ashad · Emperor-Z
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=22&duration=3000&pause=900&color=2F80ED&center=true&vCenter=true&width=760&lines=Applied+AI+MSc+%40+Warwick;Machine+Learning+%7C+Clinical+AI+%7C+NLP;Building+local+AI+systems+and+practical+ML+tools" alt="Applied AI, clinical AI, NLP, and local AI systems" />
+</p>
+
 **AI/ML engineer** · MSc Applied AI @ University of Warwick  
 Focused on machine learning systems, clinical AI, NLP, and practical automation tooling.
 
