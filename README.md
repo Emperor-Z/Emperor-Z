@@ -13,8 +13,11 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Emperor-Z&show_icons=true&hide_title=true&hide_border=true&bg_color=0F172A&title_color=38BDF8&icon_color=14B8A6&text_color=FFFFFF" alt="GitHub stats" height="165" />
   <img src="https://streak-stats.demolab.com?user=Emperor-Z&hide_border=true&background=0F172A&stroke=0F172A&ring=38BDF8&fire=14B8A6&currStreakLabel=38BDF8&sideLabels=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=64748B" alt="GitHub streak" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/followers/Emperor-Z?style=for-the-badge&color=14B8A6&labelColor=0F172A&logo=github&logoColor=white" alt="GitHub followers" />
 </p>
 
 ---
