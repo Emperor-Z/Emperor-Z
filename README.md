@@ -13,10 +13,6 @@
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Emperor-Z&hide_border=true&background=0F172A&stroke=0F172A&ring=38BDF8&fire=14B8A6&currStreakLabel=38BDF8&sideLabels=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=64748B&cache_bust=20260917" alt="GitHub streak" height="165" />
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/github/followers/Emperor-Z?style=for-the-badge&color=14B8A6&labelColor=0F172A&logo=github&logoColor=white" alt="GitHub followers" />
 </p>
 
