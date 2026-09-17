@@ -1,15 +1,20 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=0:0F172A,55:1D4ED8,100:14B8A6&text=Arjun%20Ashad&fontAlign=50&fontAlignY=38&fontColor=FFFFFF&fontSize=44&desc=Agentic%20AI%20%7C%20Multi-Agent%20Systems%20%7C%20Applied%20ML&descAlign=50&descAlignY=62" alt="Arjun Ashad - Agentic AI, Multi-Agent Systems, Applied ML" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=0:F172A,55:1D4ED8,100:14B8A6&text=Arjun%20Ashad&fontAlign=50&fontAlignY=38&fontColor=FFFFFF&fontSize=44&desc=Agentic%20AI%20%7C%20Multi-Agent%20Systems%20%7C%20Applied%20ML&descAlign=50&descAlignY=62" alt="Arjun Ashad - Agentic AI, Multi-Agent Systems, Applied ML" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=760&lines=MSc+Applied+AI+%40+University+of+Warwick;Building+local%2C+orchestrated+multi-agent+systems;Applying+agentic+AI+to+healthcare+and+automation" alt="Applied AI, multi-agent systems, healthcare, automation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=760&lines=MSc+Applied+AI+%40+University+of+Warwick;Building+local%2C+orchestrated+multi-agent+systems;Shipping+production+backend+systems+at+FundedIn" alt="Applied AI, multi-agent systems, production backend" />
 </p>
 
 <p align="center">
   <a href="https://linkedin.com/in/arjun-ashad-z"><img src="https://img.shields.io/badge/LinkedIn-Arjun%20Ashad-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/Emperor-Z"><img src="https://img.shields.io/badge/GitHub-Emperor--Z-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://github.com/Emperor-Z"><img src="https://img.shields.io/badge/GitHub-Emperor--Z-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <img src="https://img.shields.io/badge/Coventry-UK-14B8A6?style=for-the-badge" alt="Coventry, UK" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Emperor-Z&show_icons=true&hide_title=true&hide_border=true&bg_color=0F172A&title_color=38BDF8&icon_color=14B8A6&text_color=FFFFFF" alt="GitHub stats" height="165" />
+  <img src="https://streak-stats.demolab.com?user=Emperor-Z&hide_border=true&background=0F172A&stroke=0F172A&ring=38BDF8&fire=14B8A6&currStreakLabel=38BDF8&sideLabels=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=64748B" alt="GitHub streak" height="165" />
 </p>
 
 ---
@@ -67,6 +72,12 @@ Ophthalmology website and clinical UX work developed alongside a Unity-based amb
 </td>
 </tr>
 </table>
+
+## Professional Experience
+
+**Backend & Full-Stack Engineer** · FundedIn (Freelance, remote) · Jun 2026 - Present
+
+Shipped KYC identity verification gating trader payouts, a brokerage fee engine handling partial-fill capping and settlement, and AWS SQS outbox dispatch for order events - in a Dockerised CI/CD codebase with 13+ test modules.
 
 ## Private / NDA Work
 
