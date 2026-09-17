@@ -44,7 +44,7 @@ PyTorch · TensorFlow · HuggingFace · Unity · React · TypeScript
 <td width="33%">
 
 ### [Ares](https://github.com/Emperor-Z/aries)
-Local, 100% offline multi-agent AI system — orchestrator, coder, thinker, runner, and Serena agents over Ollama, with mem0 memory, Langfuse observability, and A2A HTTP endpoints between agents.
+Local, 100% offline multi-agent AI system - orchestrator, coder, thinker, runner, and Serena agents over Ollama, with mem0 memory, Langfuse observability, and A2A HTTP endpoints between agents.
 
 `Python` `Ollama` `Docker` `Langfuse`
 
