@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=0:0F172A,55:1D4ED8,100:14B8A6&text=Arjun%20Ashad&fontAlign=50&fontAlignY=38&fontColor=FFFFFF&fontSize=44&desc=Applied%20AI%20%7C%20Clinical%20ML%20%7C%20Local%20AI%20Systems&descAlign=50&descAlignY=62" alt="Arjun Ashad - Applied AI, Clinical ML, Local AI Systems" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=0:0F172A,55:1D4ED8,100:14B8A6&text=Arjun%20Ashad&fontAlign=50&fontAlignY=38&fontColor=FFFFFF&fontSize=44&desc=Agentic%20AI%20%7C%20Multi-Agent%20Systems%20%7C%20Applied%20ML&descAlign=50&descAlignY=62" alt="Arjun Ashad - Agentic AI, Multi-Agent Systems, Applied ML" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=760&lines=MSc+Applied+AI+%40+University+of+Warwick;Building+ML+systems+for+healthcare+and+automation;Unity+%2B+game+technology+for+interactive+clinical+tools" alt="Applied AI, healthcare ML, local AI systems, Unity game technology" />
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=760&lines=MSc+Applied+AI+%40+University+of+Warwick;Building+local%2C+orchestrated+multi-agent+systems;Applying+agentic+AI+to+healthcare+and+automation" alt="Applied AI, multi-agent systems, healthcare, automation" />
 </p>
 
 <p align="center">
@@ -18,8 +18,8 @@
 <tr>
 <td width="33%">
 
-### AI / ML
-Python · PyTorch · TensorFlow · scikit-learn · HuggingFace · OpenCV
+### Agentic AI
+Multi-agent orchestration · RAG · LLM tool-use · local inference (Ollama) · Python
 
 </td>
 <td width="33%">
@@ -30,8 +30,8 @@ FastAPI · Flask · SQL · Docker · AWS · Azure · Linux
 </td>
 <td width="33%">
 
-### Interactive Tech
-Unity · game design · UI/UX · React · TypeScript · Tailwind
+### ML / Interactive
+PyTorch · TensorFlow · HuggingFace · Unity · React · TypeScript
 
 </td>
 </tr>
@@ -43,10 +43,18 @@ Unity · game design · UI/UX · React · TypeScript · Tailwind
 <tr>
 <td width="33%">
 
-### [Ares / Aries](https://github.com/Emperor-Z/aries)
-Local multi-agent AI system with Ollama agents, A2A services, memory, Serena integration, and Langfuse observability.
+### [Ares](https://github.com/Emperor-Z/aries)
+Local, 100% offline multi-agent AI system — orchestrator, coder, thinker, runner, and Serena agents over Ollama, with mem0 memory, Langfuse observability, and A2A HTTP endpoints between agents.
 
 `Python` `Ollama` `Docker` `Langfuse`
+
+</td>
+<td width="33%">
+
+### [VeriSim](https://github.com/Emperor-Z/verisim)
+MSc dissertation prototype: a persona-driven, multi-agent clinical training simulation where consent-gated clinical actions force communication skill and clinical reasoning together. Built on Ares for local agent orchestration.
+
+`TypeScript` `Convex` `Ollama` `Multi-agent`
 
 </td>
 <td width="33%">
@@ -55,14 +63,6 @@ Local multi-agent AI system with Ollama agents, A2A services, memory, Serena int
 Ophthalmology website and clinical UX work developed alongside a Unity-based amblyopia therapy game.
 
 `HTML` `CSS` `TypeScript` `Unity`
-
-</td>
-<td width="33%">
-
-### [Amazon Review Helpfulness](https://github.com/Sana-Shikalgar/WM9B7-AIDL-AmazonReview)
-MSc group project on helpful vote prediction with label design, EDA, temporal splitting, and leakage checks.
-
-`Python` `NLP` `HuggingFace` `Pandas`
 
 </td>
 </tr>
@@ -74,4 +74,4 @@ Worked on private clinical AI/EMR tooling at **SACOM**, including ophthalmology 
 
 ## Current Focus
 
-`MSc Applied AI @ Warwick` · `medical AI` · `large-scale NLP` · `local AI agents` · `game technology for healthcare`
+`MSc Applied AI @ Warwick` · `agentic AI` · `multi-agent systems` · `RAG` · `local AI orchestration` · `healthcare AI`
