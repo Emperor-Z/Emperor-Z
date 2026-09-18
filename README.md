@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=0:F172A,55:1D4ED8,100:14B8A6&text=Arjun%20Ashad&fontAlign=50&fontAlignY=38&fontColor=FFFFFF&fontSize=44&desc=Agentic%20AI%20%7C%20Multi-Agent%20Systems%20%7C%20Applied%20ML&descAlign=50&descAlignY=62" alt="Arjun Ashad - Agentic AI, Multi-Agent Systems, Applied ML" />
+  <img src="assets/terminal-header.svg" alt="Arjun Ashad - Agentic AI, Multi-Agent Systems, Applied ML" width="760" />
 </p>
 
 <p align="center">
