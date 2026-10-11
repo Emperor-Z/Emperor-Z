@@ -1,17 +1,22 @@
 <svg width="760" height="250" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arjun Ashad - Agentic AI, Multi-Agent Systems, Applied ML">
   <defs>
     <clipPath id="card"><rect width="760" height="250" rx="14"/></clipPath>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <g clip-path="url(#card)">
     <rect width="760" height="250" fill="#0B1220"/>
     <rect width="760" height="40" fill="#111827"/>
+    <rect y="40" width="760" height="1" fill="#1E293B"/>
     <text x="20" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#38BDF8">&gt;_</text>
     <text x="46" y="25" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13"><tspan fill="#34D399">arjun</tspan><tspan fill="#64748B">@</tspan><tspan fill="#34D399">agents</tspan><tspan fill="#64748B">: ~/systems</tspan></text>
-    <g stroke="#475569" stroke-width="1.4" stroke-linecap="round">
-      <line x1="704" y1="20" x2="714" y2="20"/>
-      <rect x="726" y="14" width="11" height="11" fill="none"/>
-      <line x1="752" y1="14" x2="761" y2="23"/>
-      <line x1="761" y1="14" x2="752" y2="23"/>
+    <g stroke="#64748B" stroke-width="1.4" stroke-linecap="round" fill="none">
+      <line x1="684" y1="20" x2="694" y2="20"/>
+      <rect x="709" y="15" width="10" height="10" rx="1"/>
+      <line x1="734" y1="15" x2="744" y2="25"/>
+      <line x1="744" y1="15" x2="734" y2="25"/>
     </g>
 
     <text x="28" y="80" font-family="Inter,ui-sans-serif,system-ui,sans-serif" font-size="26" font-weight="700" fill="#F8FAFC">Arjun Ashad</text>
@@ -36,6 +41,54 @@
       </g>
       <g>
         <text x="28" y="232"><tspan fill="#14B8A6">&gt; </tspan><tspan fill="#F8FAFC">system ready</tspan><tspan fill="#38BDF8">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.51;0.54;0.92;0.95" dur="8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- agent graph: orchestrator comes up with ./run.sh, workers with "agents 5/5 online" -->
+    <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" text-anchor="middle">
+      <g>
+        <circle cx="592" cy="96" r="70" fill="url(#glow)"/>
+        <rect x="532" y="80" width="120" height="32" rx="8" fill="#0F2A3A" stroke="#38BDF8" stroke-width="1.2"/>
+        <text x="592" y="100" fill="#E2E8F0">orchestrator</text>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.03;0.06;0.92;0.95" dur="8s" repeatCount="indefinite"/>
+      </g>
+
+      <g stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1.2" fill="none">
+        <path d="M592,112 C592,150 486,150 486,186"/>
+        <path d="M592,112 C592,150 556,150 556,186"/>
+        <path d="M592,112 C592,150 628,150 628,186"/>
+        <path d="M592,112 C592,150 698,150 698,186"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.33;0.42;0.92;0.95" dur="8s" repeatCount="indefinite"/>
+      </g>
+
+      <g>
+        <rect x="456" y="186" width="60" height="28" rx="7" fill="#111827" stroke="#334155"/>
+        <text x="486" y="204" fill="#94A3B8">rag</text>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.33;0.35;0.92;0.95" dur="8s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <rect x="526" y="186" width="60" height="28" rx="7" fill="#111827" stroke="#334155"/>
+        <text x="556" y="204" fill="#94A3B8">tools</text>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.35;0.37;0.92;0.95" dur="8s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <rect x="598" y="186" width="60" height="28" rx="7" fill="#111827" stroke="#334155"/>
+        <text x="628" y="204" fill="#94A3B8">memory</text>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.37;0.39;0.92;0.95" dur="8s" repeatCount="indefinite"/>
+      </g>
+      <g>
+        <rect x="668" y="186" width="60" height="28" rx="7" fill="#111827" stroke="#334155"/>
+        <text x="698" y="204" fill="#94A3B8">eval</text>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.39;0.42;0.92;0.95" dur="8s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- messages flowing once the system is ready -->
+      <g fill="#38BDF8">
+        <circle r="2.6"><animateMotion dur="1.8s" repeatCount="indefinite" path="M592,112 C592,150 486,150 486,186"/></circle>
+        <circle r="2.6"><animateMotion dur="1.8s" begin="0.45s" repeatCount="indefinite" path="M592,112 C592,150 556,150 556,186"/></circle>
+        <circle r="2.6"><animateMotion dur="1.8s" begin="0.9s" repeatCount="indefinite" path="M592,112 C592,150 628,150 628,186"/></circle>
+        <circle r="2.6"><animateMotion dur="1.8s" begin="1.35s" repeatCount="indefinite" path="M592,112 C592,150 698,150 698,186"/></circle>
         <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.51;0.54;0.92;0.95" dur="8s" repeatCount="indefinite"/>
       </g>
     </g>
