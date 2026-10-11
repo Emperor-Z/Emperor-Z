@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-label="DevDesk architecture: an ADK router delegates by explicit tool call to per-project specialist agents or a cross-project search, all retrieving from Chroma">
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#38BDF8"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#14B8A6"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" rx="16" fill="#0B1220"/>
+  <rect x="1" y="1" width="798" height="398" rx="16" fill="none" stroke="#1E293B" stroke-width="2"/>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+    <text x="40" y="74" font-size="44" font-weight="700" fill="#F8FAFC">devdesk</text>
+    <text x="40" y="112" font-size="22" fill="#94A3B8">google adk · gemini · chroma</text>
+    <rect x="626" y="40" width="134" height="42" rx="21" fill="#0F2A3A" stroke="#38BDF8" stroke-opacity="0.55" stroke-width="1.5"/>
+    <text x="693" y="69" font-size="22" fill="#38BDF8" text-anchor="middle">RAG</text>
+
+    <g stroke="#38BDF8" stroke-width="2.4" fill="none" stroke-opacity="0.75">
+      <path d="M250,260 C296,260 296,180 336,180" marker-end="url(#arrow)"/>
+      <path d="M250,260 L336,260" marker-end="url(#arrow)"/>
+      <path d="M250,260 C296,260 296,340 336,340" marker-end="url(#arrow)"/>
+    </g>
+    <g stroke="#14B8A6" stroke-width="2" fill="none" stroke-opacity="0.7" stroke-dasharray="6 6">
+      <path d="M614,180 C646,180 646,240 668,240" marker-end="url(#arrow-teal)"/>
+      <path d="M614,260 L668,260" marker-end="url(#arrow-teal)"/>
+      <path d="M614,340 C646,340 646,280 668,280" marker-end="url(#arrow-teal)"/>
+    </g>
+
+    <rect x="40" y="212" width="210" height="96" rx="14" fill="#0F2A3A" stroke="#38BDF8" stroke-width="2"/>
+    <text x="145" y="255" font-size="27" fill="#F8FAFC" text-anchor="middle">router</text>
+    <text x="145" y="287" font-size="20" fill="#38BDF8" text-anchor="middle">ADK agent</text>
+
+    <g font-size="24">
+      <rect x="342" y="156" width="272" height="48" rx="10" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+      <text x="362" y="188" fill="#E2E8F0">verisim_agent</text>
+      <rect x="342" y="236" width="272" height="48" rx="10" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+      <text x="362" y="268" fill="#E2E8F0">ares_agent</text>
+      <rect x="342" y="316" width="272" height="48" rx="10" fill="#111827" stroke="#334155" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="362" y="348" fill="#94A3B8">search_all</text>
+    </g>
+
+    <g fill="#0F2A2A" stroke="#14B8A6" stroke-width="2">
+      <path d="M676,222 L676,302 C676,316 760,316 760,302 L760,222"/>
+      <ellipse cx="718" cy="222" rx="42" ry="12"/>
+    </g>
+    <path d="M676,250 C676,262 760,262 760,250" fill="none" stroke="#14B8A6" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M676,278 C676,290 760,290 760,278" fill="none" stroke="#14B8A6" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="718" y="348" font-size="20" fill="#14B8A6" text-anchor="middle">chroma</text>
+  </g>
+</svg>

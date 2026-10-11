@@ -38,36 +38,60 @@ PyTorch · TensorFlow · HuggingFace · Unity · React · TypeScript
 </tr>
 </table>
 
-## Featured Work
+## Featured work
 
 <table>
 <tr>
-<td width="33%">
+<td width="50%" valign="top">
 
-### [Ares](https://github.com/Emperor-Z/aries)
-Local, 100% offline multi-agent AI system - orchestrator, coder, thinker, runner, and Serena agents over Ollama, with mem0 memory, Langfuse observability, and A2A HTTP endpoints between agents.
+<a href="https://github.com/Emperor-Z/g923-claude"><img src="assets/projects/g923-claude.jpg" alt="g923-claude: racing wheel controls mapped to Claude Code actions" width="400" /></a>
 
-`Python` `Ollama` `Docker` `Langfuse`
+### [g923-claude](https://github.com/Emperor-Z/g923-claude)
+
+Drive Claude Code with a racing wheel. Brake interrupts, gas sends, the shifter switches models, and force feedback buzzes when Claude needs you. Comes with a floating HUD and a type-with-the-wheel mode; released on PyPI.
+
+`Python` `evdev` `uinput` `PyPI`
 
 </td>
-<td width="33%">
+<td width="50%" valign="top">
+
+<a href="https://github.com/Emperor-Z/ares"><img src="assets/projects/ares.svg" alt="Ares architecture: orchestrator routing to coder, thinker, runner and Serena agents on local models" width="400" /></a>
+
+### [Ares](https://github.com/Emperor-Z/ares)
+
+A fully local multi-agent system. An orchestrator routes over A2A HTTP to coder, thinker, runner and Serena agents on Ollama models, with on-disk mem0 memory, Langfuse tracing, and routing it learns from your ratings.
+
+`Python` `Ollama` `A2A` `mem0` `Langfuse`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<a href="https://github.com/Emperor-Z/verisim"><img src="assets/projects/verisim.jpg" alt="VeriSim: A&amp;E Bay 3 chest pain scenario with the patient persona panel open" width="400" /></a>
 
 ### [VeriSim](https://github.com/Emperor-Z/verisim)
-MSc dissertation prototype: a persona-driven, multi-agent clinical training simulation where consent-gated clinical actions force communication skill and clinical reasoning together. Built on Ares for local agent orchestration.
 
-`TypeScript` `Convex` `Ollama` `Multi-agent`
+My MSc dissertation prototype: a clinical training sim where the patient, a relative and a nurse are each an AI agent with its own persona. Tests are gated on patient consent, so the learner has to de-escalate before they can act. Runs offline on local models.
+
+`TypeScript` `Convex` `Ollama` `Agents`
 
 </td>
-<td width="33%">
+<td width="50%" valign="top">
 
-### [Sreenethra Clinical Platform](https://github.com/Emperor-Z/project_sreenethra_website_and_template)
-Ophthalmology website and clinical UX work developed alongside a Unity-based amblyopia therapy game.
+<a href="https://github.com/Emperor-Z/devdesk"><img src="assets/projects/devdesk.svg" alt="DevDesk architecture: ADK router delegating to per-project specialist agents over Chroma" width="400" /></a>
 
-`HTML` `CSS` `TypeScript` `Unity`
+### [DevDesk](https://github.com/Emperor-Z/devdesk)
+
+Multi-agent RAG on Google ADK. A router delegates by explicit tool call to per-project specialist agents, each grounded in that project's docs through Chroma, and a deterministic eval with a holdout split keeps the routing honest.
+
+`Python` `ADK` `Gemini` `Chroma` `RAG`
 
 </td>
 </tr>
 </table>
+
+Also: [Sreenethra clinical platform](https://github.com/Emperor-Z/project_sreenethra_website_and_template) (ophthalmology site, built alongside a Unity amblyopia therapy game) · [local LLM setup](https://github.com/Emperor-Z/loc-llm-setup) (role-aliased Ollama models on consumer hardware)
 
 ## Professional Experience
 
