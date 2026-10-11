@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="280" height="100" viewBox="280 0 280 100" role="img" aria-label="Msc Applied Ai: university of warwick" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace">
 <defs>
   <pattern id="cp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-    <path d="M20 0H0V20" fill="none" stroke="#0C1726" stroke-width="1"/>
+    <path d="M20 0H0V20" fill="none" stroke="#170B11" stroke-width="1"/>
   </pattern>
   <pattern id="cp-scan" width="4" height="4" patternUnits="userSpaceOnUse">
     <rect width="4" height="2" fill="#000" fill-opacity="0.22"/>
@@ -15,10 +15,10 @@
     <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
 </defs>
-<rect x="10" y="0" width="820" height="100" fill="#05080F"/><rect x="10" y="0" width="820" height="100" fill="url(#cp-grid)"/><path d="M10 0V100M830 0V100" stroke="#123A48" stroke-width="1.5"/>
-<path d="M307 20H543V74L533 84H297V30Z" fill="#08101C" stroke="#123A48" stroke-width="1.2"/>
-<path d="M297 44V30L307 20H321" fill="none" stroke="#00E5FF" stroke-width="2" filter="url(#cp-soft)"/><path d="M543 60V74L533 84H519" fill="none" stroke="#00E5FF" stroke-width="2" filter="url(#cp-soft)"/>
-<g fill="none" stroke="#00E5FF" stroke-width="1.6" stroke-linejoin="round" filter="url(#cp-soft)"><path d="M314 49.0L327 43.0L340 49.0L327 55.0Z"/><path d="M320 52.0V58.0C320 61.0 334 61.0 334 58.0V52.0"/><path d="M340 49.0V57.0"/></g>
-<text x="353" y="48" font-size="12" fill="#00E5FF" font-weight="700" letter-spacing="1.5">MSC APPLIED AI</text>
-<text x="353" y="66" font-size="12" fill="#8DA2B8">university of warwick</text>
+<rect x="10" y="0" width="820" height="100" fill="#0A0B0E"/><rect x="10" y="0" width="820" height="100" fill="url(#cp-grid)"/><path d="M10 0V100M830 0V100" stroke="#3A0A1E" stroke-width="1.5"/>
+<path d="M307 20H543V74L533 84H297V30Z" fill="#101116" stroke="#3A0A1E" stroke-width="1.2"/>
+<path d="M297 44V30L307 20H321" fill="none" stroke="#FF0055" stroke-width="2" filter="url(#cp-soft)"/><path d="M543 60V74L533 84H519" fill="none" stroke="#FF0055" stroke-width="2" filter="url(#cp-soft)"/>
+<g fill="none" stroke="#FF0055" stroke-width="1.6" stroke-linejoin="round" filter="url(#cp-soft)"><path d="M314 49.0L327 43.0L340 49.0L327 55.0Z"/><path d="M320 52.0V58.0C320 61.0 334 61.0 334 58.0V52.0"/><path d="M340 49.0V57.0"/></g>
+<text x="353" y="48" font-size="12" fill="#FF0055" font-weight="700" letter-spacing="1.5">MSC APPLIED AI</text>
+<text x="353" y="66" font-size="12" fill="#A9B1D6">university of warwick</text>
 </svg>

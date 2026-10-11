@@ -22,16 +22,21 @@ GRID = 20  # every panel height is a multiple of this so the grid runs across se
 
 MONO = "'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace"
 
-BG = "#05080F"
-PANEL = "#08101C"
-GRID_LINE = "#0C1726"
-EDGE = "#123A48"
-CYAN = "#00E5FF"
-MAGENTA = "#FF2E88"
-GREEN = "#3DFFA2"
-TEXT = "#E6F1FF"
-DIM = "#8DA2B8"
-FAINT = "#4B6074"
+# Palette: Arjun's VS Code theme, "Activate SCARLET protocol" (max-ss.cyberpunk)
+BG = "#0A0B0E"          # sideBar.background
+PANEL = "#101116"       # editor.background
+BAR = "#140009"         # titleBar.activeBackground
+GRID_LINE = "#170B11"
+EDGE = "#3A0A1E"        # editorGroup.border (#FF00552A) over BG
+PRIMARY = "#FF0055"     # scarlet: editor.foreground, tab.activeBorder, panel.border
+PRIMARY_FILL = "#1D000A"  # statusBar.background
+ACCENT = "#00FFC8"      # aqua: editorCursor, textLink, badge
+ACCENT_FILL = "#002212"
+GREEN = "#00FF9C"       # button / class green
+BLUE = "#00B0FF"        # function / operator blue
+TEXT = "#EEFFFF"        # variables
+DIM = "#A9B1D6"
+FAINT = "#6766B3"       # comments
 
 # ----------------------------------------------------------------------------
 # content
@@ -169,7 +174,7 @@ def chamfer(x, y, w, h, c=12):
     return f"M{x + c} {y}H{x + w}V{y + h - c}L{x + w - c} {y + h}H{x}V{y + c}Z"
 
 
-def corner_accents(x, y, w, h, c=12, color=CYAN):
+def corner_accents(x, y, w, h, c=12, color=PRIMARY):
     return (
         f'<path d="M{x} {y + c + 14}V{y + c}L{x + c} {y}H{x + c + 14}" fill="none" stroke="{color}" stroke-width="2" filter="url(#cp-soft)"/>'
         f'<path d="M{x + w} {y + h - c - 14}V{y + h - c}L{x + w - c} {y + h}H{x + w - c - 14}" fill="none" stroke="{color}" stroke-width="2" filter="url(#cp-soft)"/>'
@@ -181,10 +186,10 @@ def brackets(top=True, h=0):
     s = 22
     if top:
         return (
-            f'<path d="M2 {s}V2H{s}M{W - s} 2H{W - 2}V{s}" fill="none" stroke="{CYAN}" stroke-width="2.5" filter="url(#cp-soft)"/>'
+            f'<path d="M2 {s}V2H{s}M{W - s} 2H{W - 2}V{s}" fill="none" stroke="{PRIMARY}" stroke-width="2.5" filter="url(#cp-soft)"/>'
         )
     return (
-        f'<path d="M2 {h - s}V{h - 2}H{s}M{W - s} {h - 2}H{W - 2}V{h - s}" fill="none" stroke="{CYAN}" stroke-width="2.5" filter="url(#cp-soft)"/>'
+        f'<path d="M2 {h - s}V{h - 2}H{s}M{W - s} {h - 2}H{W - 2}V{h - s}" fill="none" stroke="{PRIMARY}" stroke-width="2.5" filter="url(#cp-soft)"/>'
     )
 
 
@@ -192,7 +197,7 @@ def prompt(x, y, cmd, size=13):
     return (
         f'<text x="{x}" y="{y}" font-size="{size}">'
         f'<tspan fill="{GREEN}">arjun@agents</tspan><tspan fill="{FAINT}">:</tspan>'
-        f'<tspan fill="{CYAN}">~</tspan><tspan fill="{FAINT}">$ </tspan>'
+        f'<tspan fill="{BLUE}">~</tspan><tspan fill="{FAINT}">$ </tspan>'
         f'<tspan fill="{DIM}">{esc(cmd)}</tspan></text>'
     )
 
@@ -226,10 +231,10 @@ def header():
     c = [brackets(top=True), body(h, top=10)]
     c.append(f'<path d="M{FRAME_L} 10H{FRAME_R}" stroke="{EDGE}" stroke-width="1.5"/>')
     # status bar
-    c.append(f'<rect x="{FRAME_L + 1}" y="11" width="{FRAME_R - FRAME_L - 2}" height="34" fill="{PANEL}"/>')
+    c.append(f'<rect x="{FRAME_L + 1}" y="11" width="{FRAME_R - FRAME_L - 2}" height="34" fill="{BAR}"/>')
     c.append(f'<path d="M{FRAME_L} 45H{FRAME_R}" stroke="{EDGE}"/>')
     c.append(f'<text x="30" y="33" font-size="11" letter-spacing="2">'
-             f'<tspan fill="{CYAN}">SYS://ARJUN-ASHAD</tspan><tspan fill="{FAINT}"> // NODE:AGENTS</tspan></text>')
+             f'<tspan fill="{PRIMARY}">SYS://ARJUN-ASHAD</tspan><tspan fill="{FAINT}"> // NODE:AGENTS</tspan></text>')
     status = "ONLINE · AGENTS 5/5"
     dot_x = 810 - len(status) * (11 * 0.6 + 2) - 12
     c.append(f'<circle cx="{dot_x:.0f}" cy="29" r="4" fill="{GREEN}" filter="url(#cp-soft)">'
@@ -240,8 +245,8 @@ def header():
     c.append(prompt(40, 92, "whoami"))
     # magenta and cyan copies offset by 2px give a chromatic edge; they jolt apart briefly every 7s
     c.append(f'<g {name_attrs}>'
-             f'<text x="38" y="156" fill="{MAGENTA}" fill-opacity="0.75">ARJUN ASHAD{jitter.format(a=-4, b=3)}</text>'
-             f'<text x="42" y="156" fill="{CYAN}" fill-opacity="0.75">ARJUN ASHAD{jitter.format(a=4, b=-3)}</text>'
+             f'<text x="38" y="156" fill="{ACCENT}" fill-opacity="0.75">ARJUN ASHAD{jitter.format(a=-4, b=3)}</text>'
+             f'<text x="42" y="156" fill="{PRIMARY}" fill-opacity="0.75">ARJUN ASHAD{jitter.format(a=4, b=-3)}</text>'
              f'<text x="40" y="156" fill="{TEXT}" filter="url(#cp-soft)">ARJUN ASHAD</text>'
              '</g>')
     lines = [
@@ -251,7 +256,7 @@ def header():
     ]
     for i, s in enumerate(lines):
         y = 196 + i * 24
-        c.append(f'<text x="40" y="{y}" font-size="14"><tspan fill="{CYAN}">&gt;&gt; </tspan>'
+        c.append(f'<text x="40" y="{y}" font-size="14"><tspan fill="{PRIMARY}">&gt;&gt; </tspan>'
                  f'<tspan fill="{TEXT if i == 0 else DIM}">{esc(s)}</tspan></text>')
 
     # boot log, the old terminal header in one line
@@ -259,18 +264,18 @@ def header():
             f'<tspan fill="{GREEN}">[ok]</tspan><tspan fill="{DIM}"> ollama   </tspan>'
             f'<tspan fill="{GREEN}">[ok]</tspan><tspan fill="{DIM}"> langfuse   </tspan>'
             f'<tspan fill="{GREEN}">[ok]</tspan><tspan fill="{DIM}"> agents 5/5   </tspan>'
-            f'<tspan fill="{CYAN}">&gt; system ready</tspan>'
-            f'<tspan fill="{CYAN}">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></tspan>'
+            f'<tspan fill="{PRIMARY}">&gt; system ready</tspan>'
+            f'<tspan fill="{PRIMARY}">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></tspan>'
             '</text>')
     c.append(f'<path d="M30 280H810" stroke="{EDGE}" stroke-dasharray="2 4"/>')
     c.append(boot)
 
     # agent graph
     g = [f'<g font-size="11" text-anchor="middle">']
-    g.append(f'<circle cx="680" cy="150" r="88" fill="{CYAN}" fill-opacity="0.045"/>')
-    g.append(f'<g><path d="{chamfer(616, 94, 128, 34, 8)}" fill="#04222B" stroke="{CYAN}" stroke-width="1.5" filter="url(#cp-soft)"/>'
+    g.append(f'<circle cx="680" cy="150" r="88" fill="{PRIMARY}" fill-opacity="0.045"/>')
+    g.append(f'<g><path d="{chamfer(616, 94, 128, 34, 8)}" fill="{PRIMARY_FILL}" stroke="{PRIMARY}" stroke-width="1.5" filter="url(#cp-soft)"/>'
              f'{text(680, 116, "orchestrator", 12, TEXT)}{fade(0.03)}</g>')
-    g.append(f'<g stroke="{CYAN}" stroke-opacity="0.55" stroke-width="1.3" fill="none">'
+    g.append(f'<g stroke="{PRIMARY}" stroke-opacity="0.55" stroke-width="1.3" fill="none">'
              + "".join(f'<path d="{p}"/>' for p in graph_paths) + f"{fade(0.20, out=0.95)}</g>")
     for i, (label, cx) in enumerate(children):
         g.append(f'<g><path d="{chamfer(cx - 29, 214, 58, 28, 6)}" fill="{PANEL}" stroke="{EDGE}" stroke-width="1.2"/>'
@@ -279,7 +284,7 @@ def header():
         f'<circle r="2.6"><animateMotion dur="1.8s" begin="{i * 0.45:.2f}s" repeatCount="indefinite" path="{p}"/></circle>'
         for i, p in enumerate(graph_paths)
     )
-    g.append(f'<g fill="{MAGENTA}" filter="url(#cp-soft)">{pulses}{fade(0.40)}</g>')
+    g.append(f'<g fill="{ACCENT}" filter="url(#cp-soft)">{pulses}{fade(0.40)}</g>')
     g.append("</g>")
     c.extend(g)
     c.append(text(680, 262, "// agent mesh", 10, FAINT, anchor="middle", spacing=1))
@@ -303,18 +308,18 @@ def link_row():
         c.append(corner_accents(bx, by, bw, bh, 10))
         ix, iy = bx + 30, by + bh / 2
         if icon == "linkedin":
-            c.append(f'<rect x="{ix - 12}" y="{iy - 12}" width="24" height="24" rx="4" fill="none" stroke="{CYAN}" stroke-width="1.6" filter="url(#cp-soft)"/>')
-            c.append(text(ix, iy + 5, "in", 13, CYAN, weight="700", anchor="middle"))
+            c.append(f'<rect x="{ix - 12}" y="{iy - 12}" width="24" height="24" rx="4" fill="none" stroke="{PRIMARY}" stroke-width="1.6" filter="url(#cp-soft)"/>')
+            c.append(text(ix, iy + 5, "in", 13, PRIMARY, weight="700", anchor="middle"))
         elif icon == "cap":
-            c.append(f'<g fill="none" stroke="{CYAN}" stroke-width="1.6" stroke-linejoin="round" filter="url(#cp-soft)">'
+            c.append(f'<g fill="none" stroke="{PRIMARY}" stroke-width="1.6" stroke-linejoin="round" filter="url(#cp-soft)">'
                      f'<path d="M{ix - 13} {iy - 3}L{ix} {iy - 9}L{ix + 13} {iy - 3}L{ix} {iy + 3}Z"/>'
                      f'<path d="M{ix - 7} {iy}V{iy + 6}C{ix - 7} {iy + 9} {ix + 7} {iy + 9} {ix + 7} {iy + 6}V{iy}"/>'
                      f'<path d="M{ix + 13} {iy - 3}V{iy + 5}"/></g>')
         else:
-            c.append(f'<g fill="none" stroke="{CYAN}" stroke-width="1.6" filter="url(#cp-soft)">'
+            c.append(f'<g fill="none" stroke="{PRIMARY}" stroke-width="1.6" filter="url(#cp-soft)">'
                      f'<path d="M{ix} {iy + 12}C{ix} {iy + 12} {ix - 9} {iy + 2} {ix - 9} {iy - 3}A9 9 0 0 1 {ix + 9} {iy - 3}C{ix + 9} {iy + 2} {ix} {iy + 12} {ix} {iy + 12}Z"/>'
                      f'<circle cx="{ix}" cy="{iy - 3}" r="3"/></g>')
-        c.append(text(bx + 56, by + 28, title, 12, CYAN, weight="700", spacing=1.5))
+        c.append(text(bx + 56, by + 28, title, 12, PRIMARY, weight="700", spacing=1.5))
         c.append(text(bx + 56, by + 46, sub, 12, DIM))
         write(name, svg("\n".join(c), h, x0=x0, w=280, label=f"{title.title()}: {sub}"))
 
@@ -323,21 +328,21 @@ def section(slug, index, title, cmd):
     h = 100
     c = [body(h)]
     c.append(f'<text x="40" y="46" font-size="20" font-weight="800" letter-spacing="4">'
-             f'<tspan fill="{MAGENTA}">//</tspan><tspan fill="{CYAN}" filter="url(#cp-soft)"> {esc(title)}</tspan></text>')
+             f'<tspan fill="{ACCENT}">//</tspan><tspan fill="{PRIMARY}" filter="url(#cp-soft)"> {esc(title)}</tspan></text>')
     c.append(text(800, 46, f"{index:02d}", 12, FAINT, anchor="end", spacing=2))
     c.append(f'<path d="M40 60H800" stroke="{EDGE}"/>')
     end = 40 + len(f"// {title}") * (20 * 0.6 + 4)
-    c.append(f'<path d="M40 60H{end:.0f}" stroke="{CYAN}" stroke-width="2" filter="url(#cp-soft)"/>')
-    c.append(f'<path d="M{end + 6:.0f} 60h10m6 0h6" stroke="{MAGENTA}" stroke-width="2"/>')
+    c.append(f'<path d="M40 60H{end:.0f}" stroke="{PRIMARY}" stroke-width="2" filter="url(#cp-soft)"/>')
+    c.append(f'<path d="M{end + 6:.0f} 60h10m6 0h6" stroke="{ACCENT}" stroke-width="2"/>')
     c.append(prompt(40, 88, cmd, 12))
     write(f"section-{slug}.svg", svg("\n".join(c), h, label=title.title()))
 
 
 def diagram(kind):
     """800x400 drawing scaled into a card thumbnail."""
-    node = f'fill="#04222B" stroke="{CYAN}" stroke-width="2.5" filter="url(#cp-soft)"'
+    node = f'fill="{PRIMARY_FILL}" stroke="{PRIMARY}" stroke-width="2.5" filter="url(#cp-soft)"'
     leaf = f'fill="{PANEL}" stroke="{EDGE}" stroke-width="2"'
-    edge = f'stroke="{CYAN}" stroke-opacity="0.65" stroke-width="2.6" fill="none"'
+    edge = f'stroke="{PRIMARY}" stroke-opacity="0.65" stroke-width="2.6" fill="none"'
     d = [f'<rect width="800" height="400" fill="{BG}"/><rect width="800" height="400" fill="url(#cp-grid)"/>']
     if kind == "ares":
         rows = [("coder", ":8101"), ("thinker", ":8102"), ("runner", ":8103"), ("serena", ":8104")]
@@ -346,31 +351,31 @@ def diagram(kind):
             f'<path d="M300 196C365 196 365 {y + 28} 430 {y + 28}"/>' for y in ys) + "</g>")
         d.append(f'<path d="{chamfer(40, 146, 260, 100, 14)}" {node}/>')
         d.append(text(170, 194, "orchestrator", 28, TEXT, anchor="middle"))
-        d.append(text(170, 228, "A2A :8100", 22, CYAN, anchor="middle"))
+        d.append(text(170, 228, "A2A :8100", 22, PRIMARY, anchor="middle"))
         for (name, port), y in zip(rows, ys):
             d.append(f'<path d="{chamfer(436, y, 324, 56, 10)}" {leaf}/>')
             d.append(text(458, y + 37, name, 26, TEXT))
             d.append(text(740, y + 36, port, 22, FAINT, anchor="end"))
-        d.append(text(40, 378, "ollama · mem0 · langfuse", 22, MAGENTA, spacing=1))
+        d.append(text(40, 378, "ollama · mem0 · langfuse", 22, ACCENT, spacing=1))
     else:
         rows = [("verisim_agent", False), ("ares_agent", False), ("search_all", True)]
         ys = [64, 162, 260]
         d.append(f'<g {edge}>' + "".join(
             f'<path d="M260 196C305 196 305 {y + 28} 344 {y + 28}"/>' for y in ys) + "</g>")
-        d.append(f'<g stroke="{MAGENTA}" stroke-opacity="0.7" stroke-width="2.2" fill="none" stroke-dasharray="7 6">'
+        d.append(f'<g stroke="{ACCENT}" stroke-opacity="0.7" stroke-width="2.2" fill="none" stroke-dasharray="7 6">'
                  + "".join(f'<path d="M616 {y + 28}C650 {y + 28} 650 200 672 200"/>' for y in ys) + "</g>")
         d.append(f'<path d="{chamfer(40, 146, 220, 100, 14)}" {node}/>')
         d.append(text(150, 194, "router", 28, TEXT, anchor="middle"))
-        d.append(text(150, 228, "ADK agent", 22, CYAN, anchor="middle"))
+        d.append(text(150, 228, "ADK agent", 22, PRIMARY, anchor="middle"))
         for (name, dashed), y in zip(rows, ys):
             dash = ' stroke-dasharray="6 5"' if dashed else ""
             d.append(f'<path d="{chamfer(350, y, 266, 56, 10)}" {leaf}{dash}/>')
             d.append(text(372, y + 37, name, 25, DIM if dashed else TEXT))
-        d.append(f'<g fill="#1A0714" stroke="{MAGENTA}" stroke-width="2.5" filter="url(#cp-soft)">'
+        d.append(f'<g fill="{ACCENT_FILL}" stroke="{ACCENT}" stroke-width="2.5" filter="url(#cp-soft)">'
                  '<path d="M680 160V240C680 256 768 256 768 240V160"/><ellipse cx="724" cy="160" rx="44" ry="13"/></g>')
-        d.append(f'<path d="M680 186C680 200 768 200 768 186M680 212C680 226 768 226 768 212" fill="none" stroke="{MAGENTA}" stroke-opacity="0.5" stroke-width="2"/>')
-        d.append(text(724, 290, "chroma", 22, MAGENTA, anchor="middle"))
-        d.append(text(40, 378, "google adk · gemini · chroma", 22, MAGENTA, spacing=1))
+        d.append(f'<path d="M680 186C680 200 768 200 768 186M680 212C680 226 768 226 768 212" fill="none" stroke="{ACCENT}" stroke-opacity="0.5" stroke-width="2"/>')
+        d.append(text(724, 290, "chroma", 22, ACCENT, anchor="middle"))
+        d.append(text(40, 378, "google adk · gemini · chroma", 22, ACCENT, spacing=1))
     return "".join(d)
 
 
@@ -393,16 +398,16 @@ def project_cards():
                 inner = f'<svg x="{tx}" y="{ty}" width="{tw}" height="{th}" viewBox="0 0 800 400">{diagram(ref)}</svg>'
             c.append(inner)
             c.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" fill="url(#cp-scan)"/>')
-            c.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" fill="none" stroke="{CYAN}" stroke-opacity="0.45"/>')
+            c.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" fill="none" stroke="{PRIMARY}" stroke-opacity="0.45"/>')
 
             y = ty + th + 34
             c.append(f'<text x="{tx}" y="{y}" font-size="18" font-weight="800" letter-spacing="1">'
-                     f'<tspan fill="{CYAN}" filter="url(#cp-soft)">{esc(p["title"])}</tspan>'
-                     f'<tspan fill="{MAGENTA}" font-size="15"> ↗</tspan></text>')
+                     f'<tspan fill="{PRIMARY}" filter="url(#cp-soft)">{esc(p["title"])}</tspan>'
+                     f'<tspan fill="{ACCENT}" font-size="15"> ↗</tspan></text>')
             chip_w = len(p["chip"]) * 6.6 + 18
             cx = tx + tw - chip_w
-            c.append(f'<rect x="{cx}" y="{y - 15}" width="{chip_w}" height="20" fill="#1A0714" stroke="{MAGENTA}" stroke-opacity="0.7"/>')
-            c.append(text(cx + chip_w / 2, y - 1, p["chip"], 11, MAGENTA, anchor="middle"))
+            c.append(f'<rect x="{cx}" y="{y - 15}" width="{chip_w}" height="20" fill="{ACCENT_FILL}" stroke="{ACCENT}" stroke-opacity="0.7"/>')
+            c.append(text(cx + chip_w / 2, y - 1, p["chip"], 11, ACCENT, anchor="middle"))
 
             for i, line in enumerate(textwrap.wrap(p["desc"], 46)):
                 c.append(text(tx, y + 28 + i * 19, line, 12.5, DIM))
@@ -412,7 +417,7 @@ def project_cards():
             for tag in p["tags"]:
                 tw2 = len(tag) * 6.6 + 16
                 c.append(f'<rect x="{x}" y="{ty2 - 14}" width="{tw2}" height="20" fill="none" stroke="{EDGE}"/>')
-                c.append(text(x + tw2 / 2, ty2, tag, 11, CYAN, anchor="middle"))
+                c.append(text(x + tw2 / 2, ty2, tag, 11, PRIMARY, anchor="middle"))
                 x += tw2 + 8
 
             label = f'{p["title"]}: {p["desc"]}'
@@ -426,15 +431,15 @@ def experience():
         lines = textwrap.wrap(e["desc"], 92)
         top = y
         blocks.append(f'<text x="56" y="{y + 18}" font-size="14" font-weight="800" letter-spacing="1">'
-                      f'<tspan fill="{CYAN}">{esc(e["role"])}</tspan>'
-                      f'<tspan fill="{MAGENTA}">  @ {esc(e["org"])}</tspan></text>')
+                      f'<tspan fill="{PRIMARY}">{esc(e["role"])}</tspan>'
+                      f'<tspan fill="{ACCENT}">  @ {esc(e["org"])}</tspan></text>')
         blocks.append(text(800, y + 18, e["when"], 11, DIM, anchor="end", spacing=1.5))
         blocks.append(text(56, y + 40, e["meta"], 12, FAINT))
         for i, line in enumerate(lines):
             blocks.append(text(56, y + 66 + i * 20, line, 13, DIM))
         y = y + 66 + (len(lines) - 1) * 20 + 30
-        blocks.append(f'<path d="M40 {top + 4}V{y - 24}" stroke="{CYAN}" stroke-width="2" filter="url(#cp-soft)"/>')
-        blocks.append(f'<rect x="36" y="{top + 4}" width="8" height="8" fill="{MAGENTA}"/>')
+        blocks.append(f'<path d="M40 {top + 4}V{y - 24}" stroke="{PRIMARY}" stroke-width="2" filter="url(#cp-soft)"/>')
+        blocks.append(f'<rect x="36" y="{top + 4}" width="8" height="8" fill="{ACCENT}"/>')
     h = -(-y // GRID) * GRID
     write("experience.svg", svg(body(h) + "\n" + "\n".join(blocks), h,
           label="Experience. " + " ".join(f'{e["role"].title()} at {e["org"].title()}, {e["when"].lower()}: {e["desc"]}' for e in EXPERIENCE)))
@@ -450,7 +455,7 @@ def stack():
     c.append(f'<svg x="{ix}" y="22" width="{iw}" height="48" viewBox="0 0 3856 256">{inner}</svg>')
     c.append(f'<path d="M40 98H800" stroke="{EDGE}" stroke-dasharray="2 4"/>')
     c.append(f'<text x="420" y="132" font-size="13" text-anchor="middle">'
-             f'<tspan fill="{MAGENTA}" font-weight="800" letter-spacing="2">AI TOOLING  </tspan>'
+             f'<tspan fill="{ACCENT}" font-weight="800" letter-spacing="2">AI TOOLING  </tspan>'
              f'<tspan fill="{DIM}">{esc(AI_TOOLING)}</tspan></text>')
     write("stack.svg", svg("\n".join(c), h,
           label="Stack: Python, TypeScript, FastAPI, Flask, PostgreSQL, Docker, AWS, Azure, Linux, PyTorch, TensorFlow, React, Unity. AI tooling: " + AI_TOOLING))
@@ -463,8 +468,8 @@ def footer():
     c.append(brackets(top=False, h=h))
     c.append(prompt(40, 32, "exit", 12))
     c.append(f'<text x="800" y="32" font-size="11" text-anchor="end" letter-spacing="2">'
-             f'<tspan fill="{FAINT}">SESSION CLOSED · </tspan><tspan fill="{CYAN}">AGENTS IDLE</tspan>'
-             f'<tspan fill="{CYAN}">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></tspan></text>')
+             f'<tspan fill="{FAINT}">SESSION CLOSED · </tspan><tspan fill="{PRIMARY}">AGENTS IDLE</tspan>'
+             f'<tspan fill="{PRIMARY}">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></tspan></text>')
     write("footer.svg", svg("\n".join(c), h, label="Session closed."))
 
 

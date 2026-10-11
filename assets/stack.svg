@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="160" viewBox="0 0 840 160" role="img" aria-label="Stack: Python, TypeScript, FastAPI, Flask, PostgreSQL, Docker, AWS, Azure, Linux, PyTorch, TensorFlow, React, Unity. AI tooling: ollama · google adk · mem0 · langfuse · chroma · hugging face" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace">
 <defs>
   <pattern id="cp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-    <path d="M20 0H0V20" fill="none" stroke="#0C1726" stroke-width="1"/>
+    <path d="M20 0H0V20" fill="none" stroke="#170B11" stroke-width="1"/>
   </pattern>
   <pattern id="cp-scan" width="4" height="4" patternUnits="userSpaceOnUse">
     <rect width="4" height="2" fill="#000" fill-opacity="0.22"/>
@@ -15,7 +15,7 @@
     <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
 </defs>
-<rect x="10" y="0" width="820" height="160" fill="#05080F"/><rect x="10" y="0" width="820" height="160" fill="url(#cp-grid)"/><path d="M10 0V160M830 0V160" stroke="#123A48" stroke-width="1.5"/>
+<rect x="10" y="0" width="820" height="160" fill="#0A0B0E"/><rect x="10" y="0" width="820" height="160" fill="url(#cp-grid)"/><path d="M10 0V160M830 0V160" stroke="#3A0A1E" stroke-width="1.5"/>
 <svg x="58.5" y="22" width="723" height="48" viewBox="0 0 3856 256">
     
         <g transform="translate(0, 0)">
@@ -88,6 +88,6 @@
         </g>
         
   </svg>
-<path d="M40 98H800" stroke="#123A48" stroke-dasharray="2 4"/>
-<text x="420" y="132" font-size="13" text-anchor="middle"><tspan fill="#FF2E88" font-weight="800" letter-spacing="2">AI TOOLING  </tspan><tspan fill="#8DA2B8">ollama · google adk · mem0 · langfuse · chroma · hugging face</tspan></text>
+<path d="M40 98H800" stroke="#3A0A1E" stroke-dasharray="2 4"/>
+<text x="420" y="132" font-size="13" text-anchor="middle"><tspan fill="#00FFC8" font-weight="800" letter-spacing="2">AI TOOLING  </tspan><tspan fill="#A9B1D6">ollama · google adk · mem0 · langfuse · chroma · hugging face</tspan></text>
 </svg>
