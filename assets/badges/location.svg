@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="134" height="28" viewBox="0 0 134 28" role="img" aria-label="Coventry, UK">
-  <title>Coventry, UK</title>
-  <rect x="0.5" y="0.5" width="133" height="27" rx="7" fill="#0B1220" stroke="#1E293B"/>
-  <path d="M16 6.5 C12.7 6.5 10.5 8.9 10.5 11.8 C10.5 15.6 16 21.5 16 21.5 C16 21.5 21.5 15.6 21.5 11.8 C21.5 8.9 19.3 6.5 16 6.5 Z" fill="#14B8A6"/>
-  <circle cx="16" cy="11.9" r="2.1" fill="#0B1220"/>
-  <text x="34" y="18.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#E2E8F0" textLength="88.8" lengthAdjust="spacingAndGlyphs">coventry, uk</text>
-</svg>
