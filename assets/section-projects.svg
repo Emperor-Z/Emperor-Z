@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="100" viewBox="0 0 840 100" role="img" aria-label="Projects" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace">
+<defs>
+  <pattern id="cp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20 0H0V20" fill="none" stroke="#0C1726" stroke-width="1"/>
+  </pattern>
+  <pattern id="cp-scan" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="2" fill="#000" fill-opacity="0.22"/>
+  </pattern>
+  <filter id="cp-glow" filterUnits="userSpaceOnUse" x="-50" y="-50" width="1000" height="1000">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="cp-soft" filterUnits="userSpaceOnUse" x="-50" y="-50" width="1000" height="1000">
+    <feGaussianBlur stdDeviation="1.4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect x="10" y="0" width="820" height="100" fill="#05080F"/><rect x="10" y="0" width="820" height="100" fill="url(#cp-grid)"/><path d="M10 0V100M830 0V100" stroke="#123A48" stroke-width="1.5"/>
+<text x="40" y="46" font-size="20" font-weight="800" letter-spacing="4"><tspan fill="#FF2E88">//</tspan><tspan fill="#00E5FF" filter="url(#cp-soft)"> PROJECTS</tspan></text>
+<text x="800" y="46" font-size="12" fill="#4B6074" text-anchor="end" letter-spacing="2">01</text>
+<path d="M40 60H800" stroke="#123A48"/>
+<path d="M40 60H216" stroke="#00E5FF" stroke-width="2" filter="url(#cp-soft)"/>
+<path d="M222 60h10m6 0h6" stroke="#FF2E88" stroke-width="2"/>
+<text x="40" y="88" font-size="12"><tspan fill="#3DFFA2">arjun@agents</tspan><tspan fill="#4B6074">:</tspan><tspan fill="#00E5FF">~</tspan><tspan fill="#4B6074">$ </tspan><tspan fill="#8DA2B8">ls ~/projects</tspan></text>
+</svg>

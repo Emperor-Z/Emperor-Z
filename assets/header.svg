@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="340" viewBox="0 0 840 340" role="img" aria-label="Arjun Ashad. Agentic AI, multi-agent systems, applied ML. MSc Applied AI at the University of Warwick. Backend engineer at FundedIn." font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace">
+<defs>
+  <pattern id="cp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20 0H0V20" fill="none" stroke="#0C1726" stroke-width="1"/>
+  </pattern>
+  <pattern id="cp-scan" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="2" fill="#000" fill-opacity="0.22"/>
+  </pattern>
+  <filter id="cp-glow" filterUnits="userSpaceOnUse" x="-50" y="-50" width="1000" height="1000">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="cp-soft" filterUnits="userSpaceOnUse" x="-50" y="-50" width="1000" height="1000">
+    <feGaussianBlur stdDeviation="1.4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path d="M2 22V2H22M818 2H838V22" fill="none" stroke="#00E5FF" stroke-width="2.5" filter="url(#cp-soft)"/>
+<rect x="10" y="10" width="820" height="330" fill="#05080F"/><rect x="10" y="10" width="820" height="330" fill="url(#cp-grid)"/><path d="M10 10V340M830 10V340" stroke="#123A48" stroke-width="1.5"/>
+<path d="M10 10H830" stroke="#123A48" stroke-width="1.5"/>
+<rect x="11" y="11" width="818" height="34" fill="#08101C"/>
+<path d="M10 45H830" stroke="#123A48"/>
+<text x="30" y="33" font-size="11" letter-spacing="2"><tspan fill="#00E5FF">SYS://ARJUN-ASHAD</tspan><tspan fill="#4B6074"> // NODE:AGENTS</tspan></text>
+<circle cx="635" cy="29" r="4" fill="#3DFFA2" filter="url(#cp-soft)"><animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/></circle>
+<text x="810" y="33" font-size="11" fill="#8DA2B8" text-anchor="end" letter-spacing="2">ONLINE · AGENTS 5/5</text>
+<text x="40" y="92" font-size="13"><tspan fill="#3DFFA2">arjun@agents</tspan><tspan fill="#4B6074">:</tspan><tspan fill="#00E5FF">~</tspan><tspan fill="#4B6074">$ </tspan><tspan fill="#8DA2B8">whoami</tspan></text>
+<g font-size="52" font-weight="800" letter-spacing="5"><text x="38" y="156" fill="#FF2E88" fill-opacity="0.75">ARJUN ASHAD<animateTransform attributeName="transform" type="translate" values="0 0;0 0;-4 0;3 1;0 0;0 0" keyTimes="0;0.90;0.92;0.94;0.96;1" dur="7s" repeatCount="indefinite"/></text><text x="42" y="156" fill="#00E5FF" fill-opacity="0.75">ARJUN ASHAD<animateTransform attributeName="transform" type="translate" values="0 0;0 0;4 0;-3 1;0 0;0 0" keyTimes="0;0.90;0.92;0.94;0.96;1" dur="7s" repeatCount="indefinite"/></text><text x="40" y="156" fill="#E6F1FF" filter="url(#cp-soft)">ARJUN ASHAD</text></g>
+<text x="40" y="196" font-size="14"><tspan fill="#00E5FF">&gt;&gt; </tspan><tspan fill="#E6F1FF">agentic AI · multi-agent systems · applied ML</tspan></text>
+<text x="40" y="220" font-size="14"><tspan fill="#00E5FF">&gt;&gt; </tspan><tspan fill="#8DA2B8">msc applied ai @ university of warwick</tspan></text>
+<text x="40" y="244" font-size="14"><tspan fill="#00E5FF">&gt;&gt; </tspan><tspan fill="#8DA2B8">backend engineer @ fundedin</tspan></text>
+<path d="M30 280H810" stroke="#123A48" stroke-dasharray="2 4"/>
+<text x="40" y="306" font-size="12"><tspan fill="#3DFFA2">[ok]</tspan><tspan fill="#8DA2B8"> ollama   </tspan><tspan fill="#3DFFA2">[ok]</tspan><tspan fill="#8DA2B8"> langfuse   </tspan><tspan fill="#3DFFA2">[ok]</tspan><tspan fill="#8DA2B8"> agents 5/5   </tspan><tspan fill="#00E5FF">&gt; system ready</tspan><tspan fill="#00E5FF">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+<g font-size="11" text-anchor="middle">
+<circle cx="680" cy="150" r="88" fill="#00E5FF" fill-opacity="0.045"/>
+<g><path d="M624 94H744V120L736 128H616V102Z" fill="#04222B" stroke="#00E5FF" stroke-width="1.5" filter="url(#cp-soft)"/><text x="680" y="116" font-size="12" fill="#E6F1FF">orchestrator</text><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.03;0.06;0.92;0.95" dur="8s" repeatCount="indefinite"/></g>
+<g stroke="#00E5FF" stroke-opacity="0.55" stroke-width="1.3" fill="none"><path d="M680 128 C680 170 594 170 594 214"/><path d="M680 128 C680 170 658 170 658 214"/><path d="M680 128 C680 170 722 170 722 214"/><path d="M680 128 C680 170 786 170 786 214"/><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.2;0.23;0.92;0.95" dur="8s" repeatCount="indefinite"/></g>
+<g><path d="M571 214H623V236L617 242H565V220Z" fill="#08101C" stroke="#123A48" stroke-width="1.2"/><text x="594" y="232" font-size="11" fill="#8DA2B8">rag</text><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.2;0.23;0.92;0.95" dur="8s" repeatCount="indefinite"/></g>
+<g><path d="M635 214H687V236L681 242H629V220Z" fill="#08101C" stroke="#123A48" stroke-width="1.2"/><text x="658" y="232" font-size="11" fill="#8DA2B8">tools</text><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.24000000000000002;0.27;0.92;0.95" dur="8s" repeatCount="indefinite"/></g>
+<g><path d="M699 214H751V236L745 242H693V220Z" fill="#08101C" stroke="#123A48" stroke-width="1.2"/><text x="722" y="232" font-size="11" fill="#8DA2B8">memory</text><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.28;0.31;0.92;0.95" dur="8s" repeatCount="indefinite"/></g>
+<g><path d="M763 214H815V236L809 242H757V220Z" fill="#08101C" stroke="#123A48" stroke-width="1.2"/><text x="786" y="232" font-size="11" fill="#8DA2B8">eval</text><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.32;0.35;0.92;0.95" dur="8s" repeatCount="indefinite"/></g>
+<g fill="#FF2E88" filter="url(#cp-soft)"><circle r="2.6"><animateMotion dur="1.8s" begin="0.00s" repeatCount="indefinite" path="M680 128 C680 170 594 170 594 214"/></circle><circle r="2.6"><animateMotion dur="1.8s" begin="0.45s" repeatCount="indefinite" path="M680 128 C680 170 658 170 658 214"/></circle><circle r="2.6"><animateMotion dur="1.8s" begin="0.90s" repeatCount="indefinite" path="M680 128 C680 170 722 170 722 214"/></circle><circle r="2.6"><animateMotion dur="1.8s" begin="1.35s" repeatCount="indefinite" path="M680 128 C680 170 786 170 786 214"/></circle><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.4;0.43;0.92;0.95" dur="8s" repeatCount="indefinite"/></g>
+</g>
+<text x="680" y="262" font-size="10" fill="#4B6074" text-anchor="middle" letter-spacing="1">// agent mesh</text>
+</svg>
