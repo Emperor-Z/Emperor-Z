@@ -1,4 +1,4 @@
-"""Builds the profile images in assets/: the hero card and the project thumbnails.
+"""Builds the profile images in assets/: the hero card and the project cards.
 
 Everything else on the profile is plain text in README.md.
 Run:  python3 tools/build.py
@@ -7,6 +7,7 @@ Run:  python3 tools/build.py
 import base64
 import html
 import shutil
+import textwrap
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -94,29 +95,53 @@ def hero():
 
 
 # ----------------------------------------------------------------------------
-# project thumbnails: all 800x400 with the same radius, frame and glow
+# project cards: one dark card per project, two per row
+#
+# Each card SVG is 420 wide with the card body inset 8px on the inner side, so two
+# cards side by side leave a 16px gutter and their outer edges line up with the hero.
 
-def frame(inner, label):
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" role="img" aria-label="{esc(label)}">
-<defs>
-  <clipPath id="r"><rect width="800" height="400" rx="20"/></clipPath>
-  <radialGradient id="glow" cx="0.28" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="{SCARLET}" stop-opacity="0.14"/>
-    <stop offset="1" stop-color="{SCARLET}" stop-opacity="0"/>
-  </radialGradient>
-</defs>
-<g clip-path="url(#r)">
-<rect width="800" height="400" fill="{BG}"/>
-{inner}
-</g>
-<rect x="1" y="1" width="798" height="398" rx="19" fill="none" stroke="{HAIRLINE}" stroke-width="2"/>
-</svg>
-"""
+PROJECTS = [
+    {
+        "slug": "g923-claude",
+        "kicker": "DEVELOPER TOOL · PYPI",
+        "title": "g923-claude",
+        "desc": "Drive Claude Code with a racing wheel. Brake interrupts, gas sends, "
+                "gears switch models, and the wheel buzzes when Claude needs you.",
+        "tags": ["python", "evdev", "uinput"],
+        "thumb": "g923-claude.jpg",
+    },
+    {
+        "slug": "ares",
+        "kicker": "LOCAL MULTI-AGENT SYSTEM",
+        "title": "Ares",
+        "desc": "An orchestrator routes coder, thinker, runner and Serena agents over "
+                "A2A on Ollama models, with mem0 memory and Langfuse tracing.",
+        "tags": ["python", "ollama", "mem0", "langfuse"],
+        "thumb": "ares",
+    },
+    {
+        "slug": "verisim",
+        "kicker": "MSC DISSERTATION",
+        "title": "VeriSim",
+        "desc": "A clinical training sim where every character is an AI agent, and "
+                "tests are gated on the patient's consent. Runs offline.",
+        "tags": ["typescript", "convex", "ollama"],
+        "thumb": "verisim.jpg",
+    },
+    {
+        "slug": "devdesk",
+        "kicker": "MULTI-AGENT RAG",
+        "title": "DevDesk",
+        "desc": "A router built on Google ADK hands each question to a per-project "
+                "specialist agent, checked by a deterministic eval.",
+        "tags": ["python", "google adk", "gemini", "chroma"],
+        "thumb": "devdesk",
+    },
+]
 
-
-def photo(name, label):
-    b64 = base64.b64encode((SRC / name).read_bytes()).decode()
-    return frame(f'<image href="data:image/jpeg;base64,{b64}" width="800" height="400" preserveAspectRatio="xMidYMid slice"/>', label)
+CARD_W, CARD_H, GUTTER = 420, 420, 16
+THUMB_H = (CARD_W - GUTTER // 2) // 2   # 2:1 thumbnail, full bleed
+WRAP = 47                               # chars per line at 14px, safe for wide fallback fonts
 
 
 def node(x, y, w, title, sub):
@@ -134,30 +159,24 @@ def leaf(x, y, w, label, port=None, dashed=False):
     return out
 
 
-def caption(s):
-    return f'<text x="60" y="366" font-size="17" fill="{COMMENT}" letter-spacing="1">{esc(s)}</text>'
-
-
-def ares():
+def ares_drawing():
     rows = [("coder", ":8101"), ("thinker", ":8102"), ("runner", ":8103"), ("serena", ":8104")]
     ys = [70, 140, 210, 280]
     edges = "".join(f'<path d="{curve(300, 200, 470, y + 25)}"/>' for y in ys)
-    inner = f"""<rect width="800" height="400" fill="url(#glow)"/>
+    return f"""<rect width="800" height="400" fill="url(#glow)"/>
 <g font-family="{MONO}">
 <g stroke="{SCARLET}" stroke-opacity="0.55" stroke-width="2.2" fill="none">{edges}</g>
 {node(60, 160, 240, "orchestrator", "a2a :8100")}
 {"".join(leaf(470, y, 270, n, p) for (n, p), y in zip(rows, ys))}
-{caption("ollama · mem0 · langfuse")}
 </g>"""
-    return frame(inner, "Ares: an orchestrator routing to coder, thinker, runner and Serena agents on local models")
 
 
-def devdesk():
+def devdesk_drawing():
     rows = ["verisim_agent", "ares_agent", "search_all"]
     ys = [95, 175, 255]
     edges = "".join(f'<path d="{curve(280, 200, 360, y + 25)}"/>' for y in ys)
     reads = "".join(f'<path d="{curve(620, y + 25, 680, 200)}"/>' for y in ys)
-    inner = f"""<rect width="800" height="400" fill="url(#glow)"/>
+    return f"""<rect width="800" height="400" fill="url(#glow)"/>
 <g font-family="{MONO}">
 <g stroke="{SCARLET}" stroke-opacity="0.55" stroke-width="2.2" fill="none">{edges}</g>
 <g stroke="{AQUA}" stroke-opacity="0.45" stroke-width="2" fill="none" stroke-dasharray="5 6">{reads}</g>
@@ -168,9 +187,58 @@ def devdesk():
   <path d="M684 190C684 202 756 202 756 190M684 212C684 224 756 224 756 212" stroke-opacity="0.4"/>
 </g>
 <text x="720" y="280" font-size="17" fill="{AQUA}" fill-opacity="0.85" text-anchor="middle">chroma</text>
-{caption("google adk · gemini · chroma")}
 </g>"""
-    return frame(inner, "DevDesk: a router agent delegating to per-project specialist agents over Chroma")
+
+
+DRAWINGS = {"ares": ares_drawing, "devdesk": devdesk_drawing}
+
+
+def thumbnail(ref):
+    if ref in DRAWINGS:
+        return DRAWINGS[ref]()
+    b64 = base64.b64encode((SRC / ref).read_bytes()).decode()
+    return f'<image href="data:image/jpeg;base64,{b64}" width="800" height="400" preserveAspectRatio="xMidYMid slice"/>'
+
+
+def card(p, side):
+    bx = 0 if side == "left" else GUTTER // 2
+    bw = CARD_W - GUTTER // 2
+    pad = 24
+    lines = textwrap.wrap(p["desc"], WRAP)
+    assert len(lines) <= 3, f'{p["slug"]}: description runs to {len(lines)} lines'
+
+    y_kicker = THUMB_H + 36
+    y_title = y_kicker + 28
+    y_desc = y_title + 30
+    y_rule = CARD_H - 48
+    y_tags = CARD_H - 21
+    ax, ay = bx + bw - pad, y_title - 6   # link arrow, top-right of the title line
+
+    desc = "".join(f'<text x="{bx + pad}" y="{y_desc + i * 22}">{esc(line)}</text>' for i, line in enumerate(lines))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_W}" height="{CARD_H}" viewBox="0 0 {CARD_W} {CARD_H}" role="img" aria-label="{esc(p["title"])}: {esc(p["desc"])}">
+<defs>
+  <clipPath id="card"><rect x="{bx}" width="{bw}" height="{CARD_H}" rx="14"/></clipPath>
+  <radialGradient id="glow" cx="0.28" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="{SCARLET}" stop-opacity="0.14"/>
+    <stop offset="1" stop-color="{SCARLET}" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<g clip-path="url(#card)">
+  <rect x="{bx}" width="{bw}" height="{CARD_H}" fill="{BG}"/>
+  <svg x="{bx}" y="0" width="{bw}" height="{THUMB_H}" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">{thumbnail(p["thumb"])}</svg>
+  <rect x="{bx}" y="{THUMB_H}" width="{bw}" height="1" fill="{HAIRLINE}"/>
+</g>
+<rect x="{bx + 0.5}" y="0.5" width="{bw - 1}" height="{CARD_H - 1}" rx="13.5" fill="none" stroke="{HAIRLINE}"/>
+
+<text x="{bx + pad}" y="{y_kicker}" font-family="{MONO}" font-size="10.5" letter-spacing="1.6" fill="{SCARLET}">{esc(p["kicker"])}</text>
+<text x="{bx + pad}" y="{y_title}" font-family="{SANS}" font-size="20" font-weight="600" fill="{TEXT}">{esc(p["title"])}</text>
+<path d="M{ax - 9} {ay + 9}L{ax} {ay}M{ax - 7} {ay}H{ax}V{ay + 7}" fill="none" stroke="{COMMENT}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<g font-family="{SANS}" font-size="14" fill="{MUTED}">{desc}</g>
+
+<rect x="{bx + pad}" y="{y_rule}" width="{bw - 2 * pad}" height="1" fill="{HAIRLINE}"/>
+<text x="{bx + pad}" y="{y_tags}" font-family="{MONO}" font-size="11" letter-spacing="0.4" fill="{COMMENT}">{esc("  ·  ".join(p["tags"]))}</text>
+</svg>
+"""
 
 
 if __name__ == "__main__":
@@ -178,8 +246,6 @@ if __name__ == "__main__":
         shutil.rmtree(OUT)
     OUT.mkdir()
     hero()
-    write("g923-claude.svg", photo("g923-claude.jpg", "g923-claude: racing wheel controls mapped to Claude Code actions"))
-    write("ares.svg", ares())
-    write("verisim.svg", photo("verisim.jpg", "VeriSim: A&E Bay 3 chest pain scenario with the patient persona panel open"))
-    write("devdesk.svg", devdesk())
+    for i, p in enumerate(PROJECTS):
+        write(f'card-{p["slug"]}.svg', card(p, "left" if i % 2 == 0 else "right"))
     shutil.copy(SRC / "skillicons.svg", OUT / "stack.svg")
