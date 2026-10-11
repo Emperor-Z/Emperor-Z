@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="280" viewBox="0 0 840 280" role="img" aria-label="Arjun Ashad. Agentic AI, multi-agent systems, applied ML.">
+<defs>
+  <radialGradient id="glow" cx="0.8" cy="0.48" r="0.4">
+    <stop offset="0" stop-color="#FF0055" stop-opacity="0.15"/>
+    <stop offset="1" stop-color="#FF0055" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="840" height="280" rx="16" fill="#0A0B0E"/>
+<rect width="840" height="280" rx="16" fill="url(#glow)"/>
+<rect x="0.5" y="0.5" width="839" height="279" rx="15.5" fill="none" stroke="#FFFFFF1A"/>
+
+<text x="56" y="76" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="13"><tspan fill="#00FF9C">arjun@agents</tspan><tspan fill="#6766B3">:~$ </tspan><tspan fill="#A9B1D6">whoami </tspan><tspan fill="#FF0055">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></tspan></text>
+<text x="54" y="134" font-family="Inter,'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="46" font-weight="600" letter-spacing="-0.5" fill="#EEFFFF">Arjun Ashad</text>
+<text x="56" y="170" font-family="Inter,'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="17" fill="#A9B1D6">Agentic AI · Multi-agent systems · Applied ML</text>
+<rect x="56" y="192" width="36" height="2" rx="1" fill="#FF0055"/>
+<text x="56" y="226" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" letter-spacing="0.5" fill="#6766B3">MSc Applied AI, Warwick  ·  Backend engineer, FundedIn</text>
+
+<g font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace">
+  <g stroke="#FF0055" stroke-opacity="0.5" stroke-width="1.3" fill="none"><path d="M671 116C671 150.0 572 150.0 572 184"/><path d="M671 116C671 150.0 638 150.0 638 184"/><path d="M671 116C671 150.0 704 150.0 704 184"/><path d="M671 116C671 150.0 770 150.0 770 184"/></g>
+  <rect x="603" y="78" width="136" height="38" rx="19.0" fill="#140009" stroke="#FF0055" stroke-width="1.6"/><text x="671.0" y="101.7" font-size="13" fill="#EEFFFF" text-anchor="middle">orchestrator</text>
+  <rect x="542" y="184" width="60" height="26" rx="13.0" fill="#101116" stroke="#FFFFFF1A" stroke-width="1.2"/><text x="572.0" y="201.0" font-size="11" fill="#EEFFFF" text-anchor="middle">rag</text><rect x="608" y="184" width="60" height="26" rx="13.0" fill="#101116" stroke="#FFFFFF1A" stroke-width="1.2"/><text x="638.0" y="201.0" font-size="11" fill="#EEFFFF" text-anchor="middle">tools</text><rect x="674" y="184" width="60" height="26" rx="13.0" fill="#101116" stroke="#FFFFFF1A" stroke-width="1.2"/><text x="704.0" y="201.0" font-size="11" fill="#EEFFFF" text-anchor="middle">memory</text><rect x="740" y="184" width="60" height="26" rx="13.0" fill="#101116" stroke="#FFFFFF1A" stroke-width="1.2"/><text x="770.0" y="201.0" font-size="11" fill="#EEFFFF" text-anchor="middle">eval</text>
+  <circle r="2.4" fill="#00FFC8"><animateMotion dur="2.4s" begin="-0.0s" repeatCount="indefinite" path="M671 116C671 150.0 572 150.0 572 184"/></circle><circle r="2.4" fill="#00FFC8"><animateMotion dur="2.4s" begin="-0.6s" repeatCount="indefinite" path="M671 116C671 150.0 638 150.0 638 184"/></circle><circle r="2.4" fill="#00FFC8"><animateMotion dur="2.4s" begin="-1.2s" repeatCount="indefinite" path="M671 116C671 150.0 704 150.0 704 184"/></circle><circle r="2.4" fill="#00FFC8"><animateMotion dur="2.4s" begin="-1.8s" repeatCount="indefinite" path="M671 116C671 150.0 770 150.0 770 184"/></circle>
+</g>
+</svg>
