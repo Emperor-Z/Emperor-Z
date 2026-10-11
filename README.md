@@ -13,31 +13,6 @@
   MSc Applied AI at the University of Warwick. Backend engineer at FundedIn.
 </p>
 
----
-
-<table>
-<tr>
-<td width="33%">
-
-### Agentic AI
-Multi-agent orchestration · RAG · LLM tool-use · local inference (Ollama) · Python
-
-</td>
-<td width="33%">
-
-### Systems
-FastAPI · Flask · SQL · Docker · AWS · Azure · Linux
-
-</td>
-<td width="33%">
-
-### ML / Interactive
-PyTorch · TensorFlow · HuggingFace · Unity · React · TypeScript
-
-</td>
-</tr>
-</table>
-
 ## Featured work
 
 <table>
@@ -93,16 +68,18 @@ Multi-agent RAG on Google ADK. A router delegates by explicit tool call to per-p
 
 Also: [Sreenethra clinical platform](https://github.com/Emperor-Z/project_sreenethra_website_and_template) (ophthalmology site, built alongside a Unity amblyopia therapy game) · [local LLM setup](https://github.com/Emperor-Z/loc-llm-setup) (role-aliased Ollama models on consumer hardware)
 
-## Professional Experience
+## Experience
 
-**Backend & Full-Stack Engineer** · FundedIn (Freelance, remote) · Jun 2026 - Present
+**Backend & Full-Stack Engineer** · FundedIn · freelance, remote · Jun 2026 - present<br />
+Shipped KYC identity verification gating trader payouts, a brokerage fee engine handling partial-fill capping and settlement, and AWS SQS outbox dispatch for order events, in a Dockerised CI/CD codebase with 13+ test modules.
 
-Shipped KYC identity verification gating trader payouts, a brokerage fee engine handling partial-fill capping and settlement, and AWS SQS outbox dispatch for order events - in a Dockerised CI/CD codebase with 13+ test modules.
+**Clinical AI / EMR tooling** · SACOM · private, under NDA<br />
+Ophthalmology workflow modules involving computer vision and voice-assisted documentation. The code and client data aren't public because of the NDA and healthcare privacy constraints.
 
-## Private / NDA Work
+## Stack
 
-Worked on private clinical AI/EMR tooling at **SACOM**, including ophthalmology workflow modules involving computer vision and voice-assisted documentation. Code and client data are not public due to NDA and healthcare privacy constraints.
+<p>
+  <img src="assets/stack.svg" alt="Python, TypeScript, FastAPI, Flask, PostgreSQL, Docker, AWS, Azure, Linux, PyTorch, TensorFlow, React, Unity" width="723" />
+</p>
 
-## Current Focus
-
-`MSc Applied AI @ Warwick` · `agentic AI` · `multi-agent systems` · `RAG` · `local AI orchestration` · `healthcare AI`
+**AI tooling:** Ollama · Google ADK · mem0 · Langfuse · Chroma · Hugging Face
