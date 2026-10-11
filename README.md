@@ -3,17 +3,14 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=760&lines=MSc+Applied+AI+%40+University+of+Warwick;Building+local%2C+orchestrated+multi-agent+systems;Shipping+production+backend+systems+at+FundedIn" alt="Applied AI, multi-agent systems, production backend" />
+  <a href="https://linkedin.com/in/arjun-ashad-z"><img src="assets/badges/linkedin.svg" alt="LinkedIn: in/arjun-ashad-z" height="28" /></a>&nbsp;
+  <img src="assets/badges/warwick.svg" alt="MSc Applied AI, University of Warwick" height="28" />&nbsp;
+  <img src="assets/badges/location.svg" alt="Coventry, UK" height="28" />
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/arjun-ashad-z"><img src="https://img.shields.io/badge/LinkedIn-Arjun%20Ashad-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/Emperor-Z"><img src="https://img.shields.io/badge/GitHub-Emperor--Z-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <img src="https://img.shields.io/badge/Coventry-UK-14B8A6?style=for-the-badge" alt="Coventry, UK" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/github/followers/Emperor-Z?style=for-the-badge&color=14B8A6&labelColor=0F172A&logo=github&logoColor=white" alt="GitHub followers" />
+  I build agentic AI systems: multi-agent orchestration, RAG with real evals, and models that run locally.<br />
+  MSc Applied AI at the University of Warwick. Backend engineer at FundedIn.
 </p>
 
 ---
